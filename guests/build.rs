@@ -24,7 +24,7 @@ fn main() {
             .unwrap(),
     );
     let build_opts = std::collections::HashMap::from_iter(
-        ["zeth-guests-reth-ethereum", "zeth-guests-reth-optimism"]
+        ["zeth-guests-reth-ethereum"]
             .into_iter()
             .map(|guest_pkg| (guest_pkg, guest_opts.build().unwrap())),
     );

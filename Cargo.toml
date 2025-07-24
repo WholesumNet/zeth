@@ -18,15 +18,15 @@ opt-level = 3
 
 # RISC Zero
 [workspace.dependencies.bonsai-sdk]
-version = "1.4.1-rc.1"
+version = "1.4.0"
 features = ["non_blocking"]
 
 [workspace.dependencies.risc0-build]
-version = "3.0.1-rc.1"
+version = "2.3.1"
 features = ["unstable"]
 
 [workspace.dependencies.risc0-zkvm]
-version = "3.0.0-rc.1"
+version = "2.3.1"
 features = ["unstable"]
 
 [workspace.dependencies.risc0-ethereum-trie]
@@ -45,9 +45,9 @@ alloy-primitives = { version = "0.8.18", default-features = false, features = [
     "map-hashbrown",
 ] }
 alloy-rlp = "0.3.8"
-op-alloy-consensus = "0.4.0"
-op-alloy-network = "0.4.0"
-op-alloy-rpc-types = "0.4.0"
+# op-alloy-consensus = "0.4.0"
+# op-alloy-network = "0.4.0"
+# op-alloy-rpc-types = "0.4.0"
 
 # Reth
 reth-chainspec = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", default-features = false, features = [
@@ -61,12 +61,12 @@ reth-evm = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", defa
 reth-evm-ethereum = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", default-features = false, features = [
     "std",
 ] }
-reth-optimism-chainspec = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", default-features = false, features = [
-    "std",
-] }
-reth-optimism-consensus = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd" }
-reth-optimism-evm = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", default-features = false }
-reth-optimism-forks = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", default-features = false }
+#reth-optimism-chainspec = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", default-features = false, features = [
+#    "std",
+#] }
+# reth-optimism-consensus = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd" }
+# reth-optimism-evm = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", default-features = false }
+# reth-optimism-forks = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", default-features = false }
 reth-primitives = { git = "https://github.com/risc0/reth", branch = "p1.1.0_zstd", default-features = false, features = [
     "std",
     "alloy-compat",
@@ -82,11 +82,11 @@ reth-storage-errors = { git = "https://github.com/risc0/reth", branch = "p1.1.0_
 zeth = { path = "crates/zeth" }
 zeth-core = { path = "crates/core" }
 zeth-core-ethereum = { path = "crates/core-ethereum" }
-zeth-core-optimism = { path = "crates/core-optimism" }
+#zeth-core-optimism = { path = "crates/core-optimism" }
 zeth-guests = { path = "guests" }
 zeth-preflight = { path = "crates/preflight" }
 zeth-preflight-ethereum = { path = "crates/preflight-ethereum" }
-zeth-preflight-optimism = { path = "crates/preflight-optimism" }
+#zeth-preflight-optimism = { path = "crates/preflight-optimism" }
 
 # Others
 anyhow = "1.0.89"
