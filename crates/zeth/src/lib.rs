@@ -31,6 +31,7 @@ use zeth_preflight::BlockBuilder;
 
 pub mod cli;
 pub mod executor;
+mod mexec;
 
 pub async fn run<
     B: BlockBuilder<N, D, R, P> + Send + Sync + 'static,
@@ -184,11 +185,13 @@ where
     } else {
         info!("Executing ...");
         // run executor only
-        let exec_env = build_executor_env(&cli, &build_result, image_id, network_name)?;
-        let executor = default_executor();
-        let session_info = executor.execute(exec_env, elf)?;
-        info!("{} user cycles executed.", session_info.cycles());
-        session_info.journal.bytes
+        // let exec_env = build_executor_env(&cli, &build_result, image_id, network_name)?;
+        // let executor = default_executor();
+        // let session_info = executor.execute(exec_env, elf)?;
+        // info!("{} user cycles executed.", session_info.cycles());
+        // session_info.journal.bytes
+        log::info!("Image Id: `{image_id:?}`");        
+        mexec::execute(elf.into(), &build_result).await?
     };
     // sanity check
     if expected_journal != computed_journal {
