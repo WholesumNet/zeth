@@ -4,8 +4,6 @@ default:
 build +ARGS="--release":
     cargo build -p zeth-ethereum --bin zeth-ethereum {{ARGS}}
 
-    cargo build -p zeth-optimism --bin zeth-optimism {{ARGS}}
-
     cargo build -p zeth-benchmark --bin zeth-benchmark {{ARGS}}
 
 cuda: (build "--release -F cuda")
@@ -17,7 +15,7 @@ run bin +ARGS:
 
 ethereum +ARGS: (run "ethereum" ARGS)
 
-optimism +ARGS: (run "optimism" ARGS)
+#optimism +ARGS: (run "optimism" ARGS)
 
 benchmark +ARGS: (run "benchmark" ARGS)
 
